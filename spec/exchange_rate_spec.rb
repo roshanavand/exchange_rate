@@ -80,7 +80,6 @@ module ExchangeRate
 
   describe UnknownCurrencyError do
     it 'raises an error on an unsupported currency code' do
-      byebug
       expect {
         ExchangeRate.at('NOK', 'UNKNOWN')
       }.to raise_error(UnknownCurrencyError)
